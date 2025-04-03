@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Online Bookstore 📚</h1>
+        
+        <div id="mainContent">
+            <div class="categories">
+                <h2>🌟 Explore Our Books 🌟</h2>
+                <ul>
+                    <li>📖 Fiction</li>
+                    <li>📚 Non-Fiction</li>
+                    <li>🚀 Sci-Fi & Fantasy</li>
+                    <li>🔍 Mystery & Thriller</li>
+                    <li>🧙‍♂️ Mythology & Legends</li>
+                </ul>
+            </div>
+            <div class="register-link">
+                New here? <span class="blink" onclick="showRegisterForm()">Register Here!</span>
+            </div>
+            <div id="countdown"></div>
+        </div>
+
+        <div id="registerForm" class="form-container">
+            <h2>✨ Create Your Account ✨</h2>
+            <form id="registrationForm" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required minlength="3">
+                    <span class="error" id="usernameError">Username must be at least 3 characters</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="emailError">Please enter a valid email</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="6">
+                    <span class="error" id="passwordError">Password must be at least 6 characters</span>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="register-link">
+                <span class="blink" onclick="showMainContent()">🏠 Back to Home</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
